@@ -1,0 +1,484 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectVersion>6.2</ProjectVersion>
+    <ToolchainName>com.Atmel.ARMGCC.CPP</ToolchainName>
+    <ProjectGuid>{b8980067-46d4-48a2-8eda-41915f812c45}</ProjectGuid>
+    <avrdevice>ATSAM4SD32C</avrdevice>
+    <avrdeviceseries>none</avrdeviceseries>
+    <OutputType>StaticLibrary</OutputType>
+    <Language>CPP</Language>
+    <OutputFileName>lib$(MSBuildProjectName)</OutputFileName>
+    <OutputFileExtension>.a</OutputFileExtension>
+    <OutputDirectory>$(MSBuildProjectDirectory)\$(Configuration)</OutputDirectory>
+    <AvrGccProjectExtensions>
+    </AvrGccProjectExtensions>
+    <AssemblyName>SharedCore</AssemblyName>
+    <Name>SharedCore</Name>
+    <RootNamespace>SharedCore</RootNamespace>
+    <ToolchainFlavour>Native</ToolchainFlavour>
+    <KeepTimersRunning>true</KeepTimersRunning>
+    <OverrideVtor>false</OverrideVtor>
+    <CacheFlash>true</CacheFlash>
+    <ProgFlashFromRam>true</ProgFlashFromRam>
+    <RamSnippetAddress>0x20000000</RamSnippetAddress>
+    <UncachedRange />
+    <OverrideVtorValue>exception_table</OverrideVtorValue>
+    <BootSegment>2</BootSegment>
+    <eraseonlaunchrule>0</eraseonlaunchrule>
+    <AsfFrameworkConfig>
+      <framework-data xmlns="">
+        <options />
+        <configurations />
+        <files />
+        <documentation help="" />
+        <offline-documentation help="" />
+        <dependencies>
+          <content-extension eid="atmel.asf" uuidref="Atmel.ASF" version="3.20.1" />
+        </dependencies>
+      </framework-data>
+    </AsfFrameworkConfig>
+    <avrtool />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)' == 'Release' ">
+    <ToolchainSettings>
+      <ArmGccCpp>
+        <armgcc.common.outputfiles.hex>True</armgcc.common.outputfiles.hex>
+        <armgcc.common.outputfiles.lss>True</armgcc.common.outputfiles.lss>
+        <armgcc.common.outputfiles.eep>True</armgcc.common.outputfiles.eep>
+        <armgcc.common.outputfiles.bin>True</armgcc.common.outputfiles.bin>
+        <armgcc.common.outputfiles.srec>True</armgcc.common.outputfiles.srec>
+        <armgcc.compiler.symbols.DefSymbols>
+          <ListValues>
+            <Value>NDEBUG</Value>
+          </ListValues>
+        </armgcc.compiler.symbols.DefSymbols>
+        <armgcc.compiler.directories.IncludePaths>
+          <ListValues>
+            <Value>%24(ToolchainDir)\..\..\CMSIS_Atmel\Device\ATMEL\sam4s\include</Value>
+            <Value>%24(ToolchainDir)\..\..\CMSIS_Atmel</Value>
+            <Value>%24(ToolchainDir)\..\..\CMSIS_Atmel\CMSIS\Include</Value>
+            <Value>%24(ToolchainDir)\..\..\CMSIS_Atmel\Device\ATMEL</Value>
+          </ListValues>
+        </armgcc.compiler.directories.IncludePaths>
+        <armgcc.compiler.optimization.level>Optimize for size (-Os)</armgcc.compiler.optimization.level>
+        <armgcc.compiler.optimization.PrepareFunctionsForGarbageCollection>True</armgcc.compiler.optimization.PrepareFunctionsForGarbageCollection>
+        <armgcc.compiler.warnings.AllWarnings>True</armgcc.compiler.warnings.AllWarnings>
+        <armgcccpp.compiler.symbols.DefSymbols>
+          <ListValues>
+            <Value>NDEBUG</Value>
+          </ListValues>
+        </armgcccpp.compiler.symbols.DefSymbols>
+        <armgcccpp.compiler.directories.IncludePaths>
+          <ListValues>
+            <Value>%24(ToolchainDir)\..\..\CMSIS_Atmel\Device\ATMEL\sam4s\include</Value>
+            <Value>%24(ToolchainDir)\..\..\CMSIS_Atmel</Value>
+            <Value>%24(ToolchainDir)\..\..\CMSIS_Atmel\CMSIS\Include</Value>
+            <Value>%24(ToolchainDir)\..\..\CMSIS_Atmel\Device\ATMEL</Value>
+          </ListValues>
+        </armgcccpp.compiler.directories.IncludePaths>
+        <armgcccpp.compiler.optimization.level>Optimize for size (-Os)</armgcccpp.compiler.optimization.level>
+        <armgcccpp.compiler.optimization.PrepareFunctionsForGarbageCollection>True</armgcccpp.compiler.optimization.PrepareFunctionsForGarbageCollection>
+        <armgcccpp.compiler.warnings.AllWarnings>True</armgcccpp.compiler.warnings.AllWarnings>
+        <armgcccpp.linker.libraries.Libraries>
+          <ListValues>
+            <Value>libm</Value>
+          </ListValues>
+        </armgcccpp.linker.libraries.Libraries>
+        <armgcccpp.linker.libraries.LibrarySearchPaths>
+          <ListValues>
+            <Value>../cmsis/linkerScripts</Value>
+          </ListValues>
+        </armgcccpp.linker.libraries.LibrarySearchPaths>
+        <armgcccpp.linker.optimization.GarbageCollectUnusedSections>True</armgcccpp.linker.optimization.GarbageCollectUnusedSections>
+        <armgcccpp.preprocessingassembler.general.IncludePaths>
+          <ListValues>
+            <Value>%24(ToolchainDir)\..\..\CMSIS_Atmel\Device\ATMEL\sam4s\include</Value>
+            <Value>%24(ToolchainDir)\..\..\CMSIS_Atmel</Value>
+            <Value>%24(ToolchainDir)\..\..\CMSIS_Atmel\CMSIS\Include</Value>
+            <Value>%24(ToolchainDir)\..\..\CMSIS_Atmel\Device\ATMEL</Value>
+          </ListValues>
+        </armgcccpp.preprocessingassembler.general.IncludePaths>
+      </ArmGccCpp>
+    </ToolchainSettings>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)' == 'Debug' ">
+    <ToolchainSettings>
+      <ArmGccCpp>
+  <armgcc.common.outputfiles.hex>True</armgcc.common.outputfiles.hex>
+  <armgcc.common.outputfiles.lss>True</armgcc.common.outputfiles.lss>
+  <armgcc.common.outputfiles.eep>True</armgcc.common.outputfiles.eep>
+  <armgcc.common.outputfiles.bin>True</armgcc.common.outputfiles.bin>
+  <armgcc.common.outputfiles.srec>True</armgcc.common.outputfiles.srec>
+  <armgcc.compiler.symbols.DefSymbols>
+    <ListValues>
+      <Value>DEBUG</Value>
+    </ListValues>
+  </armgcc.compiler.symbols.DefSymbols>
+  <armgcc.compiler.directories.IncludePaths>
+    <ListValues>
+      <Value>%24(ToolchainDir)\..\..\CMSIS_Atmel\Device\ATMEL\sam4s\include</Value>
+      <Value>%24(ToolchainDir)\..\..\CMSIS_Atmel</Value>
+      <Value>%24(ToolchainDir)\..\..\CMSIS_Atmel\CMSIS\Include</Value>
+      <Value>%24(ToolchainDir)\..\..\CMSIS_Atmel\Device\ATMEL</Value>
+      <Value>../../SamPlay/SamPlay/Config</Value>
+    </ListValues>
+  </armgcc.compiler.directories.IncludePaths>
+  <armgcc.compiler.optimization.DebugLevel>Maximum (-g3)</armgcc.compiler.optimization.DebugLevel>
+  <armgcc.compiler.warnings.AllWarnings>True</armgcc.compiler.warnings.AllWarnings>
+  <armgcccpp.compiler.symbols.DefSymbols>
+    <ListValues>
+      <Value>DEBUG</Value>
+    </ListValues>
+  </armgcccpp.compiler.symbols.DefSymbols>
+  <armgcccpp.compiler.directories.IncludePaths>
+    <ListValues>
+      <Value>%24(ToolchainDir)\..\..\CMSIS_Atmel\Device\ATMEL\sam4s\include</Value>
+      <Value>%24(ToolchainDir)\..\..\CMSIS_Atmel</Value>
+      <Value>%24(ToolchainDir)\..\..\CMSIS_Atmel\CMSIS\Include</Value>
+      <Value>%24(ToolchainDir)\..\..\CMSIS_Atmel\Device\ATMEL</Value>
+      <Value>../../SamPlay/SamPlay/Config</Value>
+      <Value>..</Value>
+    </ListValues>
+  </armgcccpp.compiler.directories.IncludePaths>
+  <armgcccpp.compiler.optimization.level>Optimize (-O1)</armgcccpp.compiler.optimization.level>
+  <armgcccpp.compiler.optimization.PrepareFunctionsForGarbageCollection>True</armgcccpp.compiler.optimization.PrepareFunctionsForGarbageCollection>
+  <armgcccpp.compiler.optimization.DebugLevel>Maximum (-g3)</armgcccpp.compiler.optimization.DebugLevel>
+  <armgcccpp.compiler.warnings.AllWarnings>True</armgcccpp.compiler.warnings.AllWarnings>
+  <armgcccpp.linker.libraries.Libraries>
+    <ListValues>
+      <Value>libm</Value>
+    </ListValues>
+  </armgcccpp.linker.libraries.Libraries>
+  <armgcccpp.linker.libraries.LibrarySearchPaths>
+    <ListValues>
+      <Value>../cmsis/linkerScripts</Value>
+    </ListValues>
+  </armgcccpp.linker.libraries.LibrarySearchPaths>
+  <armgcccpp.linker.optimization.GarbageCollectUnusedSections>True</armgcccpp.linker.optimization.GarbageCollectUnusedSections>
+  <armgcccpp.linker.memorysettings.ExternalRAM />
+  <armgcccpp.assembler.debugging.DebugLevel>Default (-g)</armgcccpp.assembler.debugging.DebugLevel>
+  <armgcccpp.preprocessingassembler.general.IncludePaths>
+    <ListValues>
+      <Value>%24(ToolchainDir)\..\..\CMSIS_Atmel\Device\ATMEL\sam4s\include</Value>
+      <Value>%24(ToolchainDir)\..\..\CMSIS_Atmel</Value>
+      <Value>%24(ToolchainDir)\..\..\CMSIS_Atmel\CMSIS\Include</Value>
+      <Value>%24(ToolchainDir)\..\..\CMSIS_Atmel\Device\ATMEL</Value>
+    </ListValues>
+  </armgcccpp.preprocessingassembler.general.IncludePaths>
+  <armgcccpp.preprocessingassembler.debugging.DebugLevel>Default (-Wa,-g)</armgcccpp.preprocessingassembler.debugging.DebugLevel>
+</ArmGccCpp>
+    </ToolchainSettings>
+  </PropertyGroup>
+  <ItemGroup>
+    <Folder Include="HAL" />
+    <Folder Include="FreeRTOS" />
+    <Folder Include="HAL\ARM_CM4" />
+    <Folder Include="HAL\SAM4" />
+    <Folder Include="HAL\SAM4\asf" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="HAL\SAM4\asf\compiler.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="HAL\SAM4\asf\conf_clock.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="HAL\SAM4\asf\genclk.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="HAL\SAM4\asf\gpio.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="HAL\SAM4\asf\interrupt.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="HAL\SAM4\asf\io.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="HAL\SAM4\asf\ioport.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="HAL\SAM4\asf\mrepeat.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="HAL\SAM4\asf\osc.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="HAL\SAM4\asf\parts.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="HAL\SAM4\asf\pio.c">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="HAL\SAM4\asf\pio.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="HAL\SAM4\asf\pio_handler.c">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="HAL\SAM4\asf\pio_handler.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="HAL\SAM4\asf\pll.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="HAL\SAM4\asf\pmc.c">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="HAL\SAM4\asf\pmc.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="HAL\SAM4\asf\preprocessor.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="HAL\SAM4\asf\sleep.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="HAL\SAM4\asf\stringz.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="HAL\SAM4\asf\sysclk.c">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="HAL\SAM4\asf\sysclk.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="HAL\SAM4\asf\tpaste.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="HAL\SAM4\asf\uart.c">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="HAL\SAM4\asf\uart.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="HAL\SAM4\scUart_Imp.cpp">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="HAL\SAM4\scUart_Imp.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="HAL\scBlockMemoryIF.cpp">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="HAL\scBlockMemoryIF.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="HAL\scBufferedIODriver.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="HAL\scLedIF.cpp">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="HAL\scLedIF.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="HAL\sctBufferedIODriver.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="HAL\sctCallbackIODriver.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="HAL\sctEventIODriver.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="HAL\scUartIF.cpp">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="HAL\scUartIF.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="scAllocator.cpp">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="scAllocator.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="scAllocator_Imp.cpp">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="scAllocator_Imp.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="scConfigureDevice.cpp">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="scConfigureDevice.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="scDateTime.cpp">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="scDateTime.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="scDebugLabelCodes.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="scDebugLabelManager.cpp">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="scDebugLabelManager.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="scDebugManager.cpp">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="scDebugManager.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="scDebugPath.cpp">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="scDebugPath.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="scDebugPathDevice.cpp">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="scDebugPathDevice.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="scDeviceDescriptor.cpp">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="scDeviceDescriptor.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="scDeviceGeneric.cpp">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="scDeviceGeneric.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="scDeviceManager.cpp">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="scDeviceManager.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="scErrorCodes.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="scEvent.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="scFSM.cpp">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="scFSM.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="scFSMState.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="scGuid.cpp">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="scGuid.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="scIAllocator.cpp">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="scIAllocator.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="scIDebugLabelManager.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="scIMessage.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="scIModule.cpp">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="scIModule.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="scIMutex.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="scIQueue.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="scISemaphore.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="scLedEngine.cpp">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="scLedEngine.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="scMessageFactory.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="scModuleManager.cpp">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="scModuleManager.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="scMutexNoOp.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="scQueueList.cpp">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="scQueueList.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="scRingBuffer.cpp">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="scRingBuffer.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="scScopeLock.cpp">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="scScopeLock.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="scSingletonPtr.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="scStandardHeader.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="scStandardHeader_t.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="scStandardMessage.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="scStateMachine.cpp">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="scStateMachine.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="scTimeSpan.cpp">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="scTimeSpan.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="scTriState.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="scTypes.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="scVersionHelper.c">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="scVersionHelper.h">
+      <SubType>compile</SubType>
+    </Compile>
+  </ItemGroup>
+  <Import Project="$(AVRSTUDIO_EXE_PATH)\\Vs\\Compiler.targets" />
+</Project>

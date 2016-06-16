@@ -1,0 +1,365 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="Source Files">
+      <UniqueIdentifier>{4FC737F1-C7A5-4376-A066-2A32D752A2FF}</UniqueIdentifier>
+      <Extensions>cpp;c;cc;cxx;def;odl;idl;hpj;bat;asm;asmx</Extensions>
+    </Filter>
+    <Filter Include="Header Files">
+      <UniqueIdentifier>{93995380-89BD-4b04-88EB-625FBE52EBFB}</UniqueIdentifier>
+      <Extensions>h;hpp;hxx;hm;inl;inc;xsd</Extensions>
+    </Filter>
+    <Filter Include="Resource Files">
+      <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
+      <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms</Extensions>
+    </Filter>
+    <Filter Include="FreeRTOS">
+      <UniqueIdentifier>{12fba490-a6d6-4043-8eab-db156f2ce12e}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="FreeRTOS\Portable">
+      <UniqueIdentifier>{42805fab-dedc-4569-aa96-93da3c9c239d}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="FreeRTOS\Include">
+      <UniqueIdentifier>{dc41833d-1e1a-48a8-b12c-2030fc4db3f4}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="SharedCore">
+      <UniqueIdentifier>{65550507-6f4a-4e4f-a560-6f31d2986c54}</UniqueIdentifier>
+      <Extensions>sc*.*</Extensions>
+    </Filter>
+    <Filter Include="SharedCore\Include">
+      <UniqueIdentifier>{a9328521-f516-46dd-837b-382ba2971795}</UniqueIdentifier>
+      <Extensions>sc*.h</Extensions>
+    </Filter>
+    <Filter Include="SharedCore\HAL">
+      <UniqueIdentifier>{8bdb64a0-733c-4741-8fa8-ef9f7039c7b0}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="SharedCore\HAL\Include">
+      <UniqueIdentifier>{b59ec858-3f59-4c64-8cfa-5b5ef810ea53}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="scUnitTest.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="scStateMachine_Test.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="scIMutex_test.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="scIQueue_test.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\scDateTime.cpp">
+      <Filter>SharedCore</Filter>
+    </ClCompile>
+    <ClCompile Include="..\scStateMachine.cpp">
+      <Filter>SharedCore</Filter>
+    </ClCompile>
+    <ClCompile Include="..\scTimeSpan.cpp">
+      <Filter>SharedCore</Filter>
+    </ClCompile>
+    <ClCompile Include="..\scFSM.cpp">
+      <Filter>SharedCore</Filter>
+    </ClCompile>
+    <ClCompile Include="..\scQueueList.cpp">
+      <Filter>SharedCore</Filter>
+    </ClCompile>
+    <ClCompile Include="scQueueList_test.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="scFSM_test.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\scRingBuffer.cpp">
+      <Filter>SharedCore</Filter>
+    </ClCompile>
+    <ClCompile Include="scRingBuffer_test.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\scDeviceDescriptor.cpp">
+      <Filter>SharedCore</Filter>
+    </ClCompile>
+    <ClCompile Include="scDeviceGuid_test.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\scDeviceGeneric.cpp">
+      <Filter>SharedCore</Filter>
+    </ClCompile>
+    <ClCompile Include="..\scDeviceManager.cpp">
+      <Filter>SharedCore</Filter>
+    </ClCompile>
+    <ClCompile Include="..\scConfigureDevice.cpp">
+      <Filter>SharedCore</Filter>
+    </ClCompile>
+    <ClCompile Include="..\scDebugPath.cpp">
+      <Filter>SharedCore</Filter>
+    </ClCompile>
+    <ClCompile Include="scDebugManager_test.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\scDebugManager.cpp">
+      <Filter>SharedCore</Filter>
+    </ClCompile>
+    <ClCompile Include="..\scDebugLabelManager.cpp">
+      <Filter>SharedCore</Filter>
+    </ClCompile>
+    <ClCompile Include="..\scAllocator.cpp">
+      <Filter>SharedCore</Filter>
+    </ClCompile>
+    <ClCompile Include="..\scIAllocator.cpp">
+      <Filter>SharedCore</Filter>
+    </ClCompile>
+    <ClCompile Include="..\scAllocator_Imp.cpp">
+      <Filter>SharedCore</Filter>
+    </ClCompile>
+    <ClCompile Include="scMessage_test.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\scScopeLock.cpp">
+      <Filter>SharedCore</Filter>
+    </ClCompile>
+    <ClCompile Include="..\HAL\scBlockMemoryIF.cpp">
+      <Filter>SharedCore\HAL</Filter>
+    </ClCompile>
+    <ClCompile Include="scLedTests.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="scIODriverTests.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\HAL\scLedIF.cpp">
+      <Filter>SharedCore\HAL</Filter>
+    </ClCompile>
+    <ClCompile Include="..\scLedEngine.cpp">
+      <Filter>SharedCore</Filter>
+    </ClCompile>
+    <ClCompile Include="..\HAL\scUartIF.cpp">
+      <Filter>SharedCore\HAL</Filter>
+    </ClCompile>
+    <ClCompile Include="..\scModuleManager.cpp">
+      <Filter>SharedCore</Filter>
+    </ClCompile>
+    <ClCompile Include="..\scIModule.cpp">
+      <Filter>SharedCore</Filter>
+    </ClCompile>
+    <ClCompile Include="scModuleManager_test.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\scDebugPathDevice.cpp">
+      <Filter>SharedCore</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="scStateMachine_Test.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\COTS\FreeRTOS\FreeRTOSV8.1.2\FreeRTOS\Source\include\croutine.h">
+      <Filter>FreeRTOS\Include</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\COTS\FreeRTOS\FreeRTOSV8.1.2\FreeRTOS\Source\include\event_groups.h">
+      <Filter>FreeRTOS\Include</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\COTS\FreeRTOS\FreeRTOSV8.1.2\FreeRTOS\Source\include\FreeRTOS.h">
+      <Filter>FreeRTOS\Include</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\COTS\FreeRTOS\FreeRTOSV8.1.2\FreeRTOS\Source\include\list.h">
+      <Filter>FreeRTOS\Include</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\COTS\FreeRTOS\FreeRTOSV8.1.2\FreeRTOS\Source\include\mpu_wrappers.h">
+      <Filter>FreeRTOS\Include</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\COTS\FreeRTOS\FreeRTOSV8.1.2\FreeRTOS\Source\include\portable.h">
+      <Filter>FreeRTOS\Include</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\COTS\FreeRTOS\FreeRTOSV8.1.2\FreeRTOS\Source\include\projdefs.h">
+      <Filter>FreeRTOS\Include</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\COTS\FreeRTOS\FreeRTOSV8.1.2\FreeRTOS\Source\include\queue.h">
+      <Filter>FreeRTOS\Include</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\COTS\FreeRTOS\FreeRTOSV8.1.2\FreeRTOS\Source\include\semphr.h">
+      <Filter>FreeRTOS\Include</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\COTS\FreeRTOS\FreeRTOSV8.1.2\FreeRTOS\Source\include\StackMacros.h">
+      <Filter>FreeRTOS\Include</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\COTS\FreeRTOS\FreeRTOSV8.1.2\FreeRTOS\Source\include\task.h">
+      <Filter>FreeRTOS\Include</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\COTS\FreeRTOS\FreeRTOSV8.1.2\FreeRTOS\Source\include\timers.h">
+      <Filter>FreeRTOS\Include</Filter>
+    </ClInclude>
+    <ClInclude Include="FreeRTOSConfig.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="scIMutex_test.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="scFSM_test.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="scIQueue_test.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="scQueueList_test.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="scRingBuffer_test.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="scDeviceGuid_test.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\scDeviceManager.h">
+      <Filter>SharedCore</Filter>
+    </ClInclude>
+    <ClInclude Include="scDebugManager_test.h">
+      <Filter>Source Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\scSingletonPtr.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="scMessage_test.h">
+      <Filter>Source Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\scAllocator.h">
+      <Filter>SharedCore\Include</Filter>
+    </ClInclude>
+    <ClInclude Include="..\scAllocator_Imp.h">
+      <Filter>SharedCore\Include</Filter>
+    </ClInclude>
+    <ClInclude Include="..\scConfigureDevice.h">
+      <Filter>SharedCore\Include</Filter>
+    </ClInclude>
+    <ClInclude Include="..\scDateTime.h">
+      <Filter>SharedCore\Include</Filter>
+    </ClInclude>
+    <ClInclude Include="..\scDebugLabelManager.h">
+      <Filter>SharedCore\Include</Filter>
+    </ClInclude>
+    <ClInclude Include="..\scDebugManager.h">
+      <Filter>SharedCore\Include</Filter>
+    </ClInclude>
+    <ClInclude Include="..\scDebugPath.h">
+      <Filter>SharedCore\Include</Filter>
+    </ClInclude>
+    <ClInclude Include="..\scDeviceDescriptor.h">
+      <Filter>SharedCore\Include</Filter>
+    </ClInclude>
+    <ClInclude Include="..\scDeviceGeneric.h">
+      <Filter>SharedCore\Include</Filter>
+    </ClInclude>
+    <ClInclude Include="..\scEvent.h">
+      <Filter>SharedCore\Include</Filter>
+    </ClInclude>
+    <ClInclude Include="..\scFSM.h">
+      <Filter>SharedCore\Include</Filter>
+    </ClInclude>
+    <ClInclude Include="..\scFSMState.h">
+      <Filter>SharedCore\Include</Filter>
+    </ClInclude>
+    <ClInclude Include="..\scGuid.h">
+      <Filter>SharedCore\Include</Filter>
+    </ClInclude>
+    <ClInclude Include="..\scIAllocator.h">
+      <Filter>SharedCore\Include</Filter>
+    </ClInclude>
+    <ClInclude Include="..\scIDebugLabelManager.h">
+      <Filter>SharedCore\Include</Filter>
+    </ClInclude>
+    <ClInclude Include="..\scIMessage.h">
+      <Filter>SharedCore\Include</Filter>
+    </ClInclude>
+    <ClInclude Include="..\scIMutex.h">
+      <Filter>SharedCore\Include</Filter>
+    </ClInclude>
+    <ClInclude Include="..\scIQueue.h">
+      <Filter>SharedCore\Include</Filter>
+    </ClInclude>
+    <ClInclude Include="..\scISemaphore.h">
+      <Filter>SharedCore\Include</Filter>
+    </ClInclude>
+    <ClInclude Include="..\scQueueList.h">
+      <Filter>SharedCore\Include</Filter>
+    </ClInclude>
+    <ClInclude Include="..\scRingBuffer.h">
+      <Filter>SharedCore\Include</Filter>
+    </ClInclude>
+    <ClInclude Include="..\scStandardHeader.h">
+      <Filter>SharedCore\Include</Filter>
+    </ClInclude>
+    <ClInclude Include="..\scStandardHeader_t.h">
+      <Filter>SharedCore\Include</Filter>
+    </ClInclude>
+    <ClInclude Include="..\scStandardMessage.h">
+      <Filter>SharedCore\Include</Filter>
+    </ClInclude>
+    <ClInclude Include="..\scStateMachine.h">
+      <Filter>SharedCore\Include</Filter>
+    </ClInclude>
+    <ClInclude Include="..\scTimeSpan.h">
+      <Filter>SharedCore\Include</Filter>
+    </ClInclude>
+    <ClInclude Include="..\scTriState.h">
+      <Filter>SharedCore\Include</Filter>
+    </ClInclude>
+    <ClInclude Include="..\scTypes.h">
+      <Filter>SharedCore\Include</Filter>
+    </ClInclude>
+    <ClInclude Include="..\scMessageFactory.h">
+      <Filter>SharedCore\Include</Filter>
+    </ClInclude>
+    <ClInclude Include="..\scScopeLock.h">
+      <Filter>SharedCore\Include</Filter>
+    </ClInclude>
+    <ClInclude Include="..\scErrorCodes.h">
+      <Filter>SharedCore\Include</Filter>
+    </ClInclude>
+    <ClInclude Include="..\scDebugLabelCodes.h">
+      <Filter>SharedCore\Include</Filter>
+    </ClInclude>
+    <ClInclude Include="..\HAL\scBlockMemoryIF.h">
+      <Filter>SharedCore\HAL\Include</Filter>
+    </ClInclude>
+    <ClInclude Include="..\HAL\scLedIF.h">
+      <Filter>SharedCore\HAL\Include</Filter>
+    </ClInclude>
+    <ClInclude Include="scLedTests.h">
+      <Filter>Source Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\HAL\scBufferedIODriver.h">
+      <Filter>SharedCore\HAL\Include</Filter>
+    </ClInclude>
+    <ClInclude Include="..\HAL\sctBufferedIODriver.h">
+      <Filter>SharedCore\HAL\Include</Filter>
+    </ClInclude>
+    <ClInclude Include="..\HAL\sctCallbackIODriver.h">
+      <Filter>SharedCore\HAL\Include</Filter>
+    </ClInclude>
+    <ClInclude Include="..\HAL\sctEventIODriver.h">
+      <Filter>SharedCore\HAL\Include</Filter>
+    </ClInclude>
+    <ClInclude Include="scIODriverTests.h">
+      <Filter>Source Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\scLedEngine.h">
+      <Filter>SharedCore\Include</Filter>
+    </ClInclude>
+    <ClInclude Include="..\HAL\scUartIF.h">
+      <Filter>SharedCore\HAL</Filter>
+    </ClInclude>
+    <ClInclude Include="scConf.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\scIModule.h">
+      <Filter>SharedCore\Include</Filter>
+    </ClInclude>
+    <ClInclude Include="..\scModuleManager.h">
+      <Filter>SharedCore\Include</Filter>
+    </ClInclude>
+    <ClInclude Include="..\scDebugPathDevice.h">
+      <Filter>SharedCore\Include</Filter>
+    </ClInclude>
+  </ItemGroup>
+</Project>

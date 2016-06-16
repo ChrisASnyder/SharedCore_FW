@@ -1,0 +1,196 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="14.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|Win32">
+      <Configuration>Debug</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|Win32">
+      <Configuration>Release</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <ProjectGuid>{119FB7AE-18CD-4E21-B8D7-D6DCF57AF8D6}</ProjectGuid>
+    <Keyword>Win32Proj</Keyword>
+    <RootNamespace>scUnitTest</RootNamespace>
+    <WindowsTargetPlatformVersion>8.1</WindowsTargetPlatformVersion>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <CharacterSet>MultiByte</CharacterSet>
+    <PlatformToolset>v140</PlatformToolset>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+    <CharacterSet>Unicode</CharacterSet>
+    <PlatformToolset>v140</PlatformToolset>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <LinkIncremental>true</LinkIncremental>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <LinkIncremental>false</LinkIncremental>
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <ClCompile>
+      <PrecompiledHeader>NotUsing</PrecompiledHeader>
+      <WarningLevel>Level3</WarningLevel>
+      <Optimization>Disabled</Optimization>
+      <PreprocessorDefinitions>_WIN32;WIN32;_DEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>../../SharedCore/scUnitTest;../../SharedCore;../../gtest/googletest;../../gtest/googletest/include;../../gtest/googlemock;../../gtest/googlemock/include</AdditionalIncludeDirectories>
+      <RuntimeLibrary>MultiThreadedDebug</RuntimeLibrary>
+    </ClCompile>
+    <Link>
+      <SubSystem>Console</SubSystem>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <AdditionalDependencies>gmock.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <AdditionalLibraryDirectories>$(OutDir);%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <PrecompiledHeader>
+      </PrecompiledHeader>
+      <Optimization>MaxSpeed</Optimization>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <PreprocessorDefinitions>WIN32;NDEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+    </ClCompile>
+    <Link>
+      <SubSystem>Console</SubSystem>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <OptimizeReferences>true</OptimizeReferences>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <ClCompile Include="..\HAL\scBlockMemoryIF.cpp" />
+    <ClCompile Include="..\HAL\scLedIF.cpp" />
+    <ClCompile Include="..\HAL\scUartIF.cpp" />
+    <ClCompile Include="..\scAllocator.cpp" />
+    <ClCompile Include="..\scAllocator_Imp.cpp" />
+    <ClCompile Include="..\scConfigureDevice.cpp" />
+    <ClCompile Include="..\scDateTime.cpp" />
+    <ClCompile Include="..\scDebugLabelManager.cpp" />
+    <ClCompile Include="..\scDebugManager.cpp" />
+    <ClCompile Include="..\scDebugPath.cpp" />
+    <ClCompile Include="..\scDebugPathDevice.cpp" />
+    <ClCompile Include="..\scDeviceDescriptor.cpp" />
+    <ClCompile Include="..\scDeviceGeneric.cpp" />
+    <ClCompile Include="..\scDeviceManager.cpp" />
+    <ClCompile Include="..\scFSM.cpp" />
+    <ClCompile Include="..\scIAllocator.cpp" />
+    <ClCompile Include="..\scIModule.cpp" />
+    <ClCompile Include="..\scLedEngine.cpp" />
+    <ClCompile Include="..\scModuleManager.cpp" />
+    <ClCompile Include="..\scQueueList.cpp" />
+    <ClCompile Include="..\scRingBuffer.cpp" />
+    <ClCompile Include="..\scScopeLock.cpp" />
+    <ClCompile Include="..\scStateMachine.cpp" />
+    <ClCompile Include="..\scTimeSpan.cpp" />
+    <ClCompile Include="scDebugManager_test.cpp" />
+    <ClCompile Include="scDeviceGuid_test.cpp" />
+    <ClCompile Include="scFSM_test.cpp" />
+    <ClCompile Include="scIMutex_test.cpp" />
+    <ClCompile Include="scIODriverTests.cpp" />
+    <ClCompile Include="scIQueue_test.cpp" />
+    <ClCompile Include="scLedTests.cpp" />
+    <ClCompile Include="scMessage_test.cpp" />
+    <ClCompile Include="scModuleManager_test.cpp" />
+    <ClCompile Include="scQueueList_test.cpp" />
+    <ClCompile Include="scRingBuffer_test.cpp" />
+    <ClCompile Include="scStateMachine_Test.cpp" />
+    <ClCompile Include="scUnitTest.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="..\..\COTS\FreeRTOS\FreeRTOSV8.1.2\FreeRTOS\Source\include\croutine.h" />
+    <ClInclude Include="..\..\COTS\FreeRTOS\FreeRTOSV8.1.2\FreeRTOS\Source\include\event_groups.h" />
+    <ClInclude Include="..\..\COTS\FreeRTOS\FreeRTOSV8.1.2\FreeRTOS\Source\include\FreeRTOS.h" />
+    <ClInclude Include="..\..\COTS\FreeRTOS\FreeRTOSV8.1.2\FreeRTOS\Source\include\list.h" />
+    <ClInclude Include="..\..\COTS\FreeRTOS\FreeRTOSV8.1.2\FreeRTOS\Source\include\mpu_wrappers.h" />
+    <ClInclude Include="..\..\COTS\FreeRTOS\FreeRTOSV8.1.2\FreeRTOS\Source\include\portable.h" />
+    <ClInclude Include="..\..\COTS\FreeRTOS\FreeRTOSV8.1.2\FreeRTOS\Source\include\projdefs.h" />
+    <ClInclude Include="..\..\COTS\FreeRTOS\FreeRTOSV8.1.2\FreeRTOS\Source\include\queue.h" />
+    <ClInclude Include="..\..\COTS\FreeRTOS\FreeRTOSV8.1.2\FreeRTOS\Source\include\semphr.h" />
+    <ClInclude Include="..\..\COTS\FreeRTOS\FreeRTOSV8.1.2\FreeRTOS\Source\include\StackMacros.h" />
+    <ClInclude Include="..\..\COTS\FreeRTOS\FreeRTOSV8.1.2\FreeRTOS\Source\include\task.h" />
+    <ClInclude Include="..\..\COTS\FreeRTOS\FreeRTOSV8.1.2\FreeRTOS\Source\include\timers.h" />
+    <ClInclude Include="..\HAL\scBlockMemoryIF.h" />
+    <ClInclude Include="..\HAL\scBufferedIODriver.h" />
+    <ClInclude Include="..\HAL\scLedIF.h" />
+    <ClInclude Include="..\HAL\sctBufferedIODriver.h" />
+    <ClInclude Include="..\HAL\sctCallbackIODriver.h" />
+    <ClInclude Include="..\HAL\sctEventIODriver.h" />
+    <ClInclude Include="..\HAL\scUartIF.h" />
+    <ClInclude Include="..\scAllocator.h" />
+    <ClInclude Include="..\scAllocator_Imp.h" />
+    <ClInclude Include="..\scConfigureDevice.h" />
+    <ClInclude Include="..\scDateTime.h" />
+    <ClInclude Include="..\scDebugLabelCodes.h" />
+    <ClInclude Include="..\scDebugLabelManager.h" />
+    <ClInclude Include="..\scDebugManager.h" />
+    <ClInclude Include="..\scDebugPath.h" />
+    <ClInclude Include="..\scDebugPathDevice.h" />
+    <ClInclude Include="..\scDeviceDescriptor.h" />
+    <ClInclude Include="..\scDeviceGeneric.h" />
+    <ClInclude Include="..\scDeviceManager.h" />
+    <ClInclude Include="..\scErrorCodes.h" />
+    <ClInclude Include="..\scEvent.h" />
+    <ClInclude Include="..\scFSM.h" />
+    <ClInclude Include="..\scFSMState.h" />
+    <ClInclude Include="..\scGuid.h" />
+    <ClInclude Include="..\scIAllocator.h" />
+    <ClInclude Include="..\scIDebugLabelManager.h" />
+    <ClInclude Include="..\scIMessage.h" />
+    <ClInclude Include="..\scIModule.h" />
+    <ClInclude Include="..\scIMutex.h" />
+    <ClInclude Include="..\scIQueue.h" />
+    <ClInclude Include="..\scISemaphore.h" />
+    <ClInclude Include="..\scLedEngine.h" />
+    <ClInclude Include="..\scMessageFactory.h" />
+    <ClInclude Include="..\scModuleManager.h" />
+    <ClInclude Include="..\scQueueList.h" />
+    <ClInclude Include="..\scRingBuffer.h" />
+    <ClInclude Include="..\scScopeLock.h" />
+    <ClInclude Include="..\scSingletonPtr.h" />
+    <ClInclude Include="..\scStandardHeader.h" />
+    <ClInclude Include="..\scStandardHeader_t.h" />
+    <ClInclude Include="..\scStandardMessage.h" />
+    <ClInclude Include="..\scStateMachine.h" />
+    <ClInclude Include="..\scTimeSpan.h" />
+    <ClInclude Include="..\scTriState.h" />
+    <ClInclude Include="..\scTypes.h" />
+    <ClInclude Include="FreeRTOSConfig.h" />
+    <ClInclude Include="scConf.h" />
+    <ClInclude Include="scDebugManager_test.h" />
+    <ClInclude Include="scDeviceGuid_test.h" />
+    <ClInclude Include="scFSM_test.h" />
+    <ClInclude Include="scIMutex_test.h" />
+    <ClInclude Include="scIODriverTests.h" />
+    <ClInclude Include="scIQueue_test.h" />
+    <ClInclude Include="scLedTests.h" />
+    <ClInclude Include="scMessage_test.h" />
+    <ClInclude Include="scQueueList_test.h" />
+    <ClInclude Include="scRingBuffer_test.h" />
+    <ClInclude Include="scStateMachine_Test.h" />
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+</Project>
