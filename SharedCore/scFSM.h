@@ -74,7 +74,7 @@ namespace SharedCore
 		/// <param name="ns">Number of states</param>
 		/// <param name="is">Initial State</param>
 		/// <param name="pMatrix">Pointer to the transition matrix. </param>
-		/// <param name="pQueue">This is a pointer to the the queue that will that the task will place
+		/// <param name="pQueue">This is a pointer to the queue that will that the task will place
 		/// the next transaction onto.
 		/// </param>
 		scFSM(int ni, int ns, int is, const int* pMatrix, scIQueue* pQueue );

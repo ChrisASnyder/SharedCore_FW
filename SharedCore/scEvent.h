@@ -48,6 +48,7 @@ namespace SharedCore
 		* 					Usually, this can be a pointer to the subscriber object itself.
 		*/
 		typedef void(*EventHandler)(SourceType *source, EventArgType eventArg, void* context);
+
 	protected:
 		/*
 		* This inner class, for each EventHandler, stores the associated context information -

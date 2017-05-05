@@ -179,17 +179,17 @@ namespace SharedCore
 		scDeviceGeneric( const scDeviceDescriptor& descriptor );
 
 		/// <summary>
-		/// Construct the class using the Guid and one dependant
+		/// Construct the class using the Guid and one dependent
 		/// </summary>
 		/// <param name="descriptor">Describes the descriptor for this device.</param>
-		/// <param name="dependant">the sole dependant of the device.</param>
+		/// <param name="dependant">the sole dependent of the device.</param>
 		scDeviceGeneric( const scDeviceDescriptor& descriptor, const scDeviceDescriptor& dependant );
 
 		/// <summary>
-		/// Construct the class using the Guid and multiple dependants
+		/// Construct the class using the Guid and multiple dependents
 		/// </summary>
 		/// <param name="descriptor">Describes the descriptor for this device.</param>
-		/// <param name="nCount">Number of dependants listed.</param>
+		/// <param name="nCount">Number of dependents listed.</param>
 		scDeviceGeneric( const scDeviceDescriptor& descriptor, int nCount, ... );
 
 		/// <summary>

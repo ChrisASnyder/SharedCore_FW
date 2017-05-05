@@ -44,6 +44,11 @@
 
 using namespace SharedCore;
 
+// If the DebugManager is subclassed, then define this macro in the
+// scConf.h header and then implement the Instance function in the body
+// of the subclass. Simply copy the code below and replace the scDebugManager
+// name in the scSingletonPtr template with the new subclass.
+#ifndef DEBUGMANAGER_INSTANCE_DEFINED
 static scSingletonPtr<scDebugManager> g_Instance;
 
 /// <summary>
@@ -53,6 +58,7 @@ scDebugManager* scDebugManager::Instance(void)
 {
 	return g_Instance.Ptr();
 }
+#endif
 
 /// <summary>
 /// Simple Destructor
